@@ -1,0 +1,16 @@
+{
+	"merchant": {
+		"name": "Oppastore",
+		"admin_email": "team@oppastore.in",
+		"app_installed": true,
+		"show_fomo_global_flag": false
+	},
+	"checkout_dynamic_data": {
+		"title_values": {
+			"title": "randomFomo(fomo_library)",
+			"status": "info",
+			"collapsible": false
+		},
+		"description": "Special price for you, locked for next X hours only"
+	}
+}
