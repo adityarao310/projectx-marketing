@@ -9,7 +9,7 @@
   <meta property="og:title" content="Subscription revenue management, simplified" />
   <meta property="og:description" content="Reduce churn. Upsell to relevant customers. Recover failing payments. Implement multi-currency pricing." />
   <meta property="og:image" content="https://www.profitboxapp.com/profitbox_dashboard.png" />
-  <link href="output.css" rel="stylesheet">
+  <link href="src/output.css" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
@@ -25,9 +25,9 @@
           <div class="mt-20">
             <div>
               <a href="#dunning" class="inline-flex space-x-4">
-                <span class="rounded bg-indigo-50 px-2.5 py-1 text-sm font-semibold text-indigo-600"> Upcoming </span>
+                <span class="rounded bg-indigo-50 px-2.5 py-1 text-sm font-semibold text-indigo-600"> New </span>
                 <span class="inline-flex items-center text-sm font-medium text-indigo-600 space-x-1">
-                  <span>Payment recovery via Whatsapp</span>
+                  <span>Auto retry failed card payment</span>
                   <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
                   </svg>
@@ -35,19 +35,30 @@
               </a>
             </div>
             <div class="mt-6 sm:max-w-xl">
-              <h1 class="text-4xl font-bold text-gray-900 tracking-tight sm:text-5xl sm:tracking-tight">Recover failing subscription payments, automagically 
+              <h1 class="text-4xl font-bold text-gray-900 tracking-tight sm:text-5xl sm:tracking-tight">Recover your failing subscription payments 
               </h1>
-              <p class="mt-6 text-xl text-gray-500">3x better than default Stripe options. <u><strong><em>Free forever</em></strong></u></p>
+              <p class="mt-6 text-xl text-gray-500">3x better than default Stripe options. <u><strong>Free forever</strong></u></p>
+              <a href="https://dashboard.profitboxapp.com/login/?next=/">
+                <button type="button" class="mt-8 inline-flex items-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                  <!-- Heroicon name: mini/envelope -->
+                  <svg class="-ml-1 mr-5 h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 00-3.7-3.7 48.678 48.678 0 00-7.324 0 4.006 4.006 0 00-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3l-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 003.7 3.7 48.656 48.656 0 007.324 0 4.006 4.006 0 003.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3l-3 3" />
+                  </svg>
+                  Signup via Stripe
+                </button>
+              </a>
             </div>
+            <!-- 
             <form class="mt-12 sm:max-w-lg sm:w-full sm:flex" method="post" action="https://app.sendx.io/api/v1/form/b3AprgfLNws6ZluzIafNLK">
               <div class="min-w-0 flex-1">
                 <label for="SubscriberForm-Email-b3AprgfLNws6ZluzIafNLK" class="sr-only">Email address</label>
                 <input autocomplete="email" id="SubscriberForm-Email-b3AprgfLNws6ZluzIafNLK" type="Email" name="Email" data-attr-type="0" class="block w-full border border-gray-300 rounded-md px-5 py-3 text-base text-gray-900 placeholder-gray-500 shadow-sm focus:border-indigo-500 focus:ring-indigo-500" placeholder="Enter your email">
               </div>
               <div class="mt-4 sm:mt-0 sm:ml-3">
-                <button type="submit" name="subscribe" class="block w-full rounded-md border border-transparent px-5 py-3 bg-indigo-600 text-base font-medium text-white shadow hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:px-10">Get beta access</button>
+                <button type="submit" name="subscribe" class="inline-flex items-center rounded-md border border-gray-300 bg-white px-6 py-3 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Get beta access</button>
               </div>
             </form>
+            -->
             <!--
             <div class="mt-6">
               <div class="inline-flex items-center divide-x divide-gray-300">
@@ -99,6 +110,29 @@
 
   <!-- Dunning -->
   <div class="py-16 bg-gray-50 overflow-hidden lg:py-24">
+    <div class="pb-8">
+      <p class="mt-4 max-w-3xl mx-auto text-center text-xl text-gray-900">Built for fast growing SaaS startups</p>
+      <div class="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
+          <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
+            <img class="filter grayscale h-12" src="classcard logo.svg" alt="Classcard">
+          </div>
+          <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
+            <img class="filter grayscale h-12" src="mailman logo.png" alt="Mailman logo">
+          </div>
+          <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
+            <img class="filter grayscale h-12" src="thumbnailtest.svg" alt="StaticKit">
+          </div>
+          <div class="col-span-1 flex justify-center md:col-span-3 lg:col-span-1">
+            <img class="filter grayscale h-12" src="https://uploads-ssl.webflow.com/5ed0dc6711a8b0ee7209c27b/5ed68c5cbd48d50027f7dcbd_kaapi_logo_light-p-500.png" alt="Kaapi">
+          </div>
+          <div class="col-span-2 flex justify-center md:col-span-3 lg:col-span-1">
+            <img class="filter grayscale h-12" src="lets dive.svg" alt="Dive">
+          </div>
+        </div>
+      </div>
+    </div>
+    
     <div class="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
       <svg class="hidden lg:block absolute left-full transform -translate-x-1/2 -translate-y-1/4" width="404" height="784" fill="none" viewBox="0 0 404 784" aria-hidden="true">
         <defs>
@@ -110,8 +144,8 @@
       </svg>
 
       <div id="dunning" class="relative">
-        <h2 class="text-center text-3xl leading-8 font-bold tracking-tight text-gray-900 sm:text-4xl sm:tracking-tight">Converts 3x more failed payments vs Stripe default</h2>
-        <p class="mt-4 max-w-3xl mx-auto text-center text-xl text-gray-900">Which means 3x more revenue, automagically for you</p>
+        <h2 class="text-center text-3xl leading-8 font-bold tracking-tight text-gray-900 sm:text-4xl sm:tracking-tight">But doesn't Stripe do this for me already?</h2>
+        <p class="mt-4 max-w-3xl mx-auto text-center text-xl text-gray-900">I am glad you asked ..</p>
         <div class="px-4 sm:px-6 lg:px-8">
           <div class="mt-8 flex flex-col">
             <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -127,13 +161,13 @@
                     <tbody class="divide-y divide-gray-200 bg-white">
                       <tr class="divide-x divide-gray-200">
                         <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm text-gray-900 sm:pl-6 flex items-center">
-                          Not enough emails to customer
+                          Not enough retries
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-red-500">
                               <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                             </svg>                     
                         </td>
                         <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-900">
-                          Multiple nudges
+                          Retry card payment smartly multiple times
                           <span class="inline-block">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-green-600">
                               <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
@@ -143,7 +177,7 @@
                       </tr>
                       <tr class="divide-x divide-gray-200">
                         <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm text-gray-900 sm:pl-6 flex items-center">
-                          No customisation
+                          Can not customise emails sent to customers
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-red-500">
                               <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                             </svg>                     
@@ -159,7 +193,7 @@
                       </tr>
                       <tr class="divide-x divide-gray-200">
                         <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm text-gray-900 sm:pl-6 flex items-center">
-                          Poorly built emails
+                          Poorly built email nudges
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-red-500">
                               <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                             </svg>                     
@@ -181,7 +215,7 @@
                             </svg>                     
                         </td>
                         <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-900">
-                          In-app reminders & Whatsapp nudges<br><em>"via Profitbox premium"</em>
+                          In-app reminders & Whatsapp nudges<br><em>"via Profitbox premium (in beta)"</em>
                           <span class="inline-block">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-green-600">
                               <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
@@ -212,102 +246,59 @@
             </div>
           </div>
         </div>
-        <div class="relative md:bg-gray-50 md:p-6">
-          <div class="lg:grid lg:grid-cols-2 lg:gap-6">
-            <div class="prose prose-indigo prose-lg text-gray-900 lg:max-w-none">
-              <p>Every month, you lose up to 15% of your MRR because of credit card failures.</p>
-              <ol role="list">
-                <li>Maybe their card's date expired?</li>
-                <li>Maybe they don't have enough funds?</li>
-              </ol>
-              
-            </div>
-            <div class="mt-6 prose prose-indigo prose-lg text-gray-900 lg:mt-0">
-              <p>It's all a black box. And Stripe doesn't tell you anything.</p>
-              <p>You have to run around manually emailing customers. Or sliding into their Linkedin DMs. By the end, <strong>you have lost revenue and time.</strong> And maybe some hair.</p>
-          </div>
-        </div>
       </div>
-
-      <div class="relative mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
-        <div class="relative">
-          <h3 class="text-2xl font-bold text-gray-900 tracking-tight sm:text-3xl sm:tracking-tight">No more manual follow ups with customers</h3>
-          <p class="mt-3 text-lg text-gray-500">We recover your passive churn on auto-pilot.</p>
-
-          <dl class="mt-10 space-y-10">
-            <div class="relative">
-              <dt>
-                <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                  <!-- Heroicon name: outline/globe-alt -->
-                  <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-                  </svg>
-                </div>
-                <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Personalised nudges</p>
-              </dt>
-              <dd class="mt-2 ml-16 text-base text-gray-500">Customise the emails based on your brand. Or choose from our defaults ready for 3x more optimised conversion.</dd>
-            </div>
-
-            <div class="relative">
-              <dt>
-                <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                  <!-- Heroicon name: outline/scale -->
-                  <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
-                  </svg>
-                </div>
-                <p class="ml-16 text-lg leading-6 font-medium text-gray-900">In-app & Whatsapp nudges</p>
-              </dt>
-              <dd class="mt-2 ml-16 text-base text-gray-500">Coming soon..</dd>
-            </div>
-
-            <div class="relative">
-              <dt>
-                <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                  <!-- Heroicon name: outline/lightning-bolt -->
-                  <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Multiple, timely nudges to customers</p>
-              </dt>
-              <dd class="mt-2 ml-16 text-base text-gray-500">If a customer payment fails, we send them a sequence of nudges to update their billing info. No setup required.
-
-              </dd>
-            </div>
-          </dl>
-        </div>
-
-        <div class="mt-10 -mx-4 relative lg:mt-0" aria-hidden="true">
-          <svg class="absolute left-1/2 transform -translate-x-1/2 translate-y-16 lg:hidden" width="784" height="404" fill="none" viewBox="0 0 784 404">
-            <defs>
-              <pattern id="ca9667ae-9f92-4be7-abcb-9e3d727f2941" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-                <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
-              </pattern>
-            </defs>
-            <rect width="784" height="404" fill="url(#ca9667ae-9f92-4be7-abcb-9e3d727f2941)" />
-          </svg>
-          <img class="relative mx-auto" width="490" src="nudge.png" alt="">
-        </div>
-      </div>
-      <!--
-      <svg class="hidden lg:block absolute right-full transform translate-x-1/2 translate-y-12" width="404" height="784" fill="none" viewBox="0 0 404 784" aria-hidden="true">
-        <defs>
-          <pattern id="64e643ad-2176-4f86-b3d7-f2c5da3b6a6d" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-            <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
-          </pattern>
-        </defs>
-        <rect width="404" height="784" fill="url(#64e643ad-2176-4f86-b3d7-f2c5da3b6a6d)" />
-      </svg>
-      -->
-    </div>
   </div>
+
+  <!-- Testimonial -->
+  <div class="py-4 bg-gray-50 overflow-hidden lg:py-4">
+    <section class="overflow-hidden bg-gray-50 py-4 md:py-20 lg:py-4">
+      <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <svg class="absolute top-full right-full translate-x-1/3 -translate-y-1/4 transform lg:translate-x-1/2 xl:-translate-y-1/2" width="404" height="404" fill="none" viewBox="0 0 404 404" role="img" aria-labelledby="svg-workcation">
+          <title id="svg-workcation">Workcation</title>
+          <defs>
+            <pattern id="ad119f34-7694-4c31-947f-5c9d249b21f3" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+              <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
+            </pattern>
+          </defs>
+          <rect width="404" height="404" fill="url(#ad119f34-7694-4c31-947f-5c9d249b21f3)" />
+        </svg>
+    
+        <div class="relative">
+          <!-- <img class="mx-auto h-8" src="https://tailwindui.com/img/logos/workcation-logo-indigo-600-mark-gray-800-and-indigo-600-text.svg" alt="Workcation">-->
+          <blockquote class="mt-10">
+            <div class="mx-auto max-w-3xl text-center text-2xl font-medium leading-9 text-gray-900">
+              <p>Classcard recovered $770 of subscription revenue within 2 days! Can't believe I used to manually reach out to customers if their card payment failed..
+              </p>
+            </div>
+            <footer class="mt-8">
+              <div class="md:flex md:items-center md:justify-center">
+                <div class="md:flex-shrink-0">
+                  <img class="mx-auto h-10 w-10 rounded-full" src="testimonial.jpeg" alt="">
+                </div>
+                <div class="mt-3 text-center md:mt-0 md:ml-4 md:flex md:items-center">
+                  <div class="text-base font-medium text-gray-900">Suraj Talreja</div>
+    
+                  <svg class="mx-1 hidden h-5 w-5 text-indigo-600 md:block" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M11 0h3L9 20H6l5-20z" />
+                  </svg>
+    
+                  <div class="text-base font-medium text-gray-500">Co-Founder & CEO at <a style="color:blue;text-decoration: underline;" href="https://www.classcardapp.com/">Classcard</a></div>
+                </div>
+              </div>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+    
+  </div>
+  
   <!-- Feature row -->
-  <div class="relative bg-white py-16 sm:py-24 lg:py-32">
+  <div class="mt-12 relative bg-white py-16 sm:py-24 lg:py-32">
     <div class="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
       <!--<h2 class="text-lg font-semibold text-indigo-600">Subscriptions & revenue</h2>-->
-      <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:tracking-tight">Coming soon - Everything you need to grow subscription revenue</p>
-      <p class="mx-auto mt-5 max-w-prose text-xl text-gray-500">Subscription revenue management, simplified</p>
+      <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:tracking-tight">Say no to revenue collection hassles</p>
+      <p class="mx-auto mt-5 max-w-prose text-xl text-gray-500">No more losing 15% MRR every month to credit card failures. Or losing hair trying to collect pending invoices.</p>
       <div class="mt-12">
         <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           <div class="pt-6">
@@ -321,8 +312,8 @@
                     </svg>
                   </span>
                 </div>
-                <h3 class="mt-8 text-lg font-medium tracking-tight text-gray-900">Kill churn on auto pilot </h3>
-                <p class="mt-5 text-base text-gray-500">Show offers or ask for feedback when a customer tries to cancel. Grow your customer success on demand.</p>
+                <h3 class="mt-8 text-lg font-medium tracking-tight text-gray-900">Auto retry payment</h3>
+                <p class="mt-5 text-base text-gray-500">Before emailing customers, we always retry payments in the background via Stripe API.</p>
               </div>
             </div>
           </div>
@@ -338,8 +329,8 @@
                     </svg>
                   </span>
                 </div>
-                <h3 class="mt-8 text-lg font-medium tracking-tight text-gray-900">Identify right customers to focus on</h3>
-                <p class="mt-5 text-base text-gray-500">Which free trial leads are highly active? Which customers are low on engagement this month? Simple insights to help you focus.</p>
+                <h3 class="mt-8 text-lg font-medium tracking-tight text-gray-900">Multiple, timely, personalised email nudges to customers</h3>
+                <p class="mt-5 text-base text-gray-500">If a customer payment fails, we send them a sequence of nudges to update their billing info. No setup required.</p>
               </div>
             </div>
           </div>
@@ -355,50 +346,18 @@
                     </svg>
                   </span>
                 </div>
-                <h3 class="mt-8 text-lg font-medium tracking-tight text-gray-900">Multi currency experiments</h3>
-                <p class="mt-5 text-base text-gray-500">Implement purchasing power parity on your pricing page. Show checkouts in local currency. One click integration with Stripe, Paddle and more..</p>
+                <h3 class="mt-8 text-lg font-medium tracking-tight text-gray-900">In-app & Whatsapp reminders</h3>
+                <p class="mt-5 text-base text-gray-500">In beta for premium plans..</p>
               </div>
             </div>
           </div>
 
-          <div class="pt-6">
-            <div class="flow-root rounded-lg bg-gray-50 px-6 pb-8">
-              <div class="-mt-6">
-                <div>
-                  <span class="inline-flex items-center justify-center rounded-md bg-indigo-500 p-3 shadow-lg">
-                    <!-- Heroicon name: outline/cog -->
-                    <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                  </span>
-                </div>
-                <h3 class="mt-8 text-lg font-medium tracking-tight text-gray-900">Timed offers & sales</h3>
-                <p class="mt-5 text-base text-gray-500">Run sales & marketing campaigns by showing disounted offers to the right customers, at the right time.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="pt-6">
-            <div class="flow-root rounded-lg bg-gray-50 px-6 pb-8">
-              <div class="-mt-6">
-                <div>
-                  <span class="inline-flex items-center justify-center rounded-md bg-indigo-500 p-3 shadow-lg">
-                    <!-- Heroicon name: outline/server -->
-                    <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
-                    </svg>
-                  </span>
-                </div>
-                <h3 class="mt-8 text-lg font-medium tracking-tight text-gray-900">Trial management</h3>
-                <p class="mt-5 text-base text-gray-500">No need for expensive Intercom like solutions for simple trial reminder and onboarding emails to customers.</p>
-              </div>
-            </div>
-          </div>
+          
         </div>
       </div>
     </div>
   </div>
+
   <!-- FAQs -->
   <div class="bg-white">
     <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-20 lg:px-8">
@@ -455,6 +414,7 @@
           </div>
 
         </div>
+        <!-- 
         <div class="mt-8 xl:mt-0">
           <h3 class="text-base font-medium text-white">Want in?</h3>
           <p class="mt-4 text-base text-gray-300">Perfect for small, fast growing SaaS businesses.</p>
@@ -466,6 +426,7 @@
             </div>
           </form>
         </div>
+        -->
       </div>
       <!--
       <div class="mt-8 border-t border-gray-700 pt-8 md:flex md:items-center md:justify-between">
@@ -510,6 +471,20 @@
       -->
     </div>
   </footer>
+  <script>
+    window.fwSettings = {
+        'widget_id': 81000000425
+    };
+    !function () {
+        if ("function" != typeof window.FreshworksWidget) {
+            var n = function () {
+                n.q.push(arguments)
+            };
+            n.q = [], window.FreshworksWidget = n
+        }
+    }()
+</script>
+<script type='text/javascript' src='https://ind-widget.freshworks.com/widgets/81000000425.js' async defer></script>
 </body>
 
 </html>
